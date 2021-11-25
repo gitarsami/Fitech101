@@ -10,7 +10,7 @@ main() {
   var charles = Henkilo.sanakirjasta(sanakirja);
   print(charles);
 
-  var ada = Henkilo.csvRivista('Ada Lovelace',1815);
+  var ada = Henkilo.csvRivista('Ada Lovelace,1815');
   print(ada);
 
 // var henkilo = Henkilo();
@@ -29,7 +29,11 @@ class Henkilo {
     syntymavuosi = sanakirja['syntymavuosi'];
     }
 
-  Henkilo.csvRivista(this.nimi,this.syntymavuosi);
+  Henkilo.csvRivista(rivi) {
+    var palat = rivi.split(',');
+    nimi = palat[0];
+    syntymavuosi = int.parse(palat[1]);
+  }
 
   toString() {
     return '$nimi ($syntymavuosi)';
