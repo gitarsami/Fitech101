@@ -7,24 +7,30 @@ import 'dart:io';
 
 main() {
     var lista = [];
-//    menu();
+  //  menu();
     print('Komennot:');
     print('1: Lisää kysymys');
     print('2: Kysy kysymyksiä');
     print('3: Lopeta');
     
     var valinta = stdin.readLineSync();
-    while(valinta != '3') {
-        if(valinta == '1') {
-            //lisaaKysymys(lista);
+    while(true) {
+      if(valinta == '3') {
+      break;
+      }
+      else if(valinta == '1') {
+        print('painoit1');
+        //lisaaKysymys(lista);
         } 
-        if(valinta == '2') {
-         
-         //   kysyKaikki(lista);
-        }
+        else if(valinta == '2') {
+        //print('painoit2');
+        kysyKaikki(lista);
+      }
+      else {
+        print('painoit väärin');
+      }
     }
 }
-
 //  print('');
 //  print('Kysymykset:');
 //  for (var i = 0; i < lista.length; i++) {
@@ -33,20 +39,23 @@ main() {
 
 
 //menu() {
-//    print('Komennot:');
-//    print('1: Lisää kysymys');
-//    print('2: Kysy kysymyksiä');
-//    print('3: Lopeta');
+//  print('Komennot:');
+//  print('1: Lisää kysymys');
+//  print('2: Kysy kysymyksiä');
+//  print('3: Lopeta');
 //    
-//    var valinta = stdin.readLineSync();
-//    while(valinta != '3') {
-//        if(valinta == '1') {
-//            lisaaKysymys(lista);
-//        } 
-//        if(valinta == '2') {
-//            kysyKaikki(lista);
-//        }
-//    }
+//  var valinta = stdin.readLineSync();
+////    while(valinta != '3') {
+//
+//  if(valinta == '1') {
+//    print('p1');
+//    lisaaKysymys(lista);
+//  } 
+//  if(valinta == '2') {
+//    print('p2');
+// //         kysyKaikki(lista);
+// //       }
+//  }
 //}
 
 lisaaKysymys(lista) {
@@ -55,10 +64,10 @@ lisaaKysymys(lista) {
   print('Kirjoita vastaus.');
   var vastaus = stdin.readLineSync();
   lista.add(Kysymys(kysymys, vastaus));
-//  menu();
 }
 
 kysyKaikki(lista) {
+  print('Kysymykset:');
   for (var i = 0; i < lista.length; i++) {
     kysy(lista[i]);
   }
