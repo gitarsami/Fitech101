@@ -1,0 +1,41 @@
+/*
+Muokkaa sovellusta seuraavaksi siten, että sivulla ja kissan sisältävillä elementeillä 
+on värit -- tämän jälkeen kissan sisältäville elementeille lisätään pyöreät reunat. 
+Määrittele ensin sivun taustaväriksi rgb(138, 186, 211) ja kunkin kissan sisältävän 
+elementin taustaväriksi rgb(237, 194, 216). Muokkaa tämän jälkeen kunkin kissan 
+sisältävän elementin tyyliä siten, että elementin reunat ovat pyöreät -- tämä onnistuu 
+tyylillä border-radius -- aseta tyylin arvoksi 15px;. Lopulta, muokkaa kutakin kissan 
+sisältävää elementtiä siten, että elementin sisälle asetettavat elementit ovat vähintään 
+5 pikselin päässä elementin reunasta (määre padding).
+*/
+
+body {
+    background-color: rgb(138, 186, 211);
+}
+h1 {
+    font-family: Helvetica;
+}
+
+p {
+    font-family: "Comic Sans MS";
+}
+
+#kissat {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.kissa {
+    margin: 10px;
+    background-color: rgb(237, 194, 216);
+    padding: 5;
+}
+
+img {
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    border-radius: 15px;
+    margin: 10px;
+}

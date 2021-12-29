@@ -1,0 +1,19 @@
+#sisalto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  
+  .punainen {
+    padding: 0.5rem;
+    background-color: red;
+  }
+  
+  .sininen {
+    padding: 1rem;
+    background-color: lightblue;
+  }
